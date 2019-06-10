@@ -1,10 +1,6 @@
 version: '2'
 services:
   jekyll:
-    build: ./
-    command: jekyll serve --host=0.0.0.0
-      # --drafts --watch --incremental
+    build: .
     ports:
         - 4000:4000
-    # volumes:
-    #     - .:/srv/jekyll

@@ -1,23 +1,10 @@
-# Use ubuntu:latest (ubuntu:18.04)
-FROM ubuntu
+FROM jekyll/jekyll
 
-# Prepare update
-ENV DEBIAN_FRONTEND noninteractive
-RUN apt-get -qqy update
-RUN apt-get -qqy install --no-install-recommends apt-utils
-
-# Install required packages
-RUN apt-get -qqy install build-essential ruby-full zlib1g-dev
-RUN gem install jekyll bundler
-
-# Setting work dir
+# Copy site and fix permissions!
 WORKDIR /app
-# Copy all files
-COPY . /app
-
-# Silence the warning Bundler prints when installing gems as root
-ENV BUNDLE_SILENCE_ROOT_WARNING 1
+COPY --chown=jekyll:jekyll . /app
+RUN chown jekyll:jekyll .
 RUN bundle install
 
-# Run Jekyll
-CMD jekyll serve --host=0.0.0.0
+# Run Jekyll, note host 0.0.0.0!
+CMD jekyll serve -H 0.0.0.0
