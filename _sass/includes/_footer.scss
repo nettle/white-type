@@ -3,8 +3,13 @@
     display: inline-block;
     text-align: center;
     width: 100%;
-    color: lighten($text-color, 24%);
-    font-size: 0.9em;
+    border-top: 1px solid $border-color;
+    color: lighten($text-color, 64%);
+    font-size: 0.8em;
+
+    a {
+        color: lighten($link-color, 30%);
+    }
 
     .footer-icons {
         ul {
