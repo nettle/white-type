@@ -1,0 +1,52 @@
+# SITE CONFIGURATION
+baseurl: ""
+url: "https://white-type.github.io"
+title: White Type # site's title
+description: "Very simple website with blog posts" # used by search engines
+
+defaults:
+  - 
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      image: assets/img/logo.png # seo tag
+
+# THEME-SPECIFIC CONFIGURATION
+theme_settings:
+  # Meta
+  avatar: assets/img/logo.png
+  color_image: /assets/img/lineart.png # In post when you set color
+  favicon: assets/favicon.ico
+
+  # Header and footer text
+  header_text: <p align="right"><br></p>
+  header_feature_image: assets/img/pexels/apple-clean-containers.jpg
+  footer_text: >
+    White Type <a href="https://jekyllrb.com/">Jekyll</a> theme
+
+  # Scripts / Features 
+  #google_analytics: # Tracking ID, e.g. "UA-000000-01"
+  #disqus_shortname:
+  #katex: true # Enable if using math markup
+
+# PAGINATION
+paginate: 50
+paginate_path: "blog/page:num"
+
+# AUTHORS
+authors:
+  some-name: # author-id
+    name: Red Sun Bonsai
+    avatar: "assets/img/avatars/red-sun-bonsai.png"
+    url: 
+
+# BUILD SETTINGS
+markdown: kramdown
+highlighter: rouge
+sass:
+  sass_dir: _sass
+  style: :compressed
+plugins: [jekyll-paginate, jekyll-seo-tag]
+exclude: [".jekyll-cache", "Gemfile", "Gemfile.lock", "type-on-strap.gemspec", "*.gem", ".idea",
+          "LICENSE", "README.md", "screenshot.png", "assets/package.json", "assets/node_modules", "assets/gulpfile.js"]
+# theme: white-type # Uncomment if using the theme as a jekyll theme gem

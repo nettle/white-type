@@ -1,4 +1,13 @@
+# Jekyll dev or build files
 _site/
 .sass-cache/
 .jekyll-cache/
 .jekyll-metadata
+*.css.map
+*.scssc
+
+# Theme Gem files
+Gemfile.lock
+*.gem
+.gems
+*.gemspec
