@@ -1,6 +1,6 @@
 # SITE CONFIGURATION
-baseurl: ""
-url: "https://white-type.github.io"
+baseurl: "/white-type"
+url: "https://nettle.github.io/white-type"
 title: White Type # site's title
 description: "Very simple website with blog posts" # used by search engines
 
