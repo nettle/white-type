@@ -14,7 +14,7 @@ defaults:
 # THEME-SPECIFIC CONFIGURATION
 theme_settings:
   # Meta
-  avatar: assets/img/logo.png
+  avatar: assets/img/logo.png # logomakr.com/95Stya
   color_image: /assets/img/lineart.png # In post when you set color
   favicon: assets/favicon.ico
 
